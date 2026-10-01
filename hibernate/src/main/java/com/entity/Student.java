@@ -5,9 +5,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
+//we mark @Entity to the classes which we need to perform the operations with DB by that it can understand.
 @Table(name="students")
 public class Student {
-    @Id
+    @Id//we mark @Id to inform that it is the primary key
     private int id;
     private String name;
     private int marks;
