@@ -14,7 +14,13 @@ public class GetAll {
         Session session = sessionFactory.openSession();
         //There is no method is available in hibernate to get all so we use HQL to retrive
         SelectionQuery<Student> selectionQuery = session.createSelectionQuery("select s from Student s", Student.class);
+        // we can use below method also if we are performing getting all objects
+        SelectionQuery<Student> selectionQuery1 = session.createSelectionQuery("from Student", Student.class);
+
         List<Student> list = selectionQuery.list();
+        List<Student> list1 = selectionQuery.list();
+
         System.out.println(list);
+        System.out.println(list1);
     }
 }

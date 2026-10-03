@@ -11,7 +11,7 @@ public class Insert {
         Session session = sessionFactory.openSession();
         // when we perform any DML operations we need to begin the transaction
         session.beginTransaction();
-        Student student= new Student(1,"Akhil",78);
+        Student student= new Student(2,"Sai",84);
         //persist method is used to save an object in hibernate
         session.persist(student);
         //after completion of transaction we need to commit the transaction
