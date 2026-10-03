@@ -1,5 +1,7 @@
 package com.util;
 
+import com.entity.Aadhar;
+import com.entity.Citizen;
 import com.entity.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,6 +14,8 @@ public class HibUtil {
             Configuration cfg = new Configuration().configure();
             //we need to give all the entites to the config then only it will works
             cfg.addAnnotatedClass(Student.class);
+            cfg.addAnnotatedClass(Aadhar.class);
+            cfg.addAnnotatedClass(Citizen.class);
             SessionFactory sf= cfg.buildSessionFactory();
             return  sessionFactory=sf;
         }

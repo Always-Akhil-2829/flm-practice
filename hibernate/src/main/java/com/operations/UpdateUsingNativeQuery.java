@@ -10,7 +10,7 @@ public class UpdateUsingNativeQuery {
     public static void main(String[] args){
         SessionFactory sessionFactory = HibUtil.getSessionFactory();
         Session session =  sessionFactory.openSession();
-        NativeQuery nativeQuery =session.createNativeQuery("update students set marks = 76 where id =1");
+        NativeQuery nativeQuery = session.createNativeQuery("update students set marks = 76 where id =1");
         session.beginTransaction();
         nativeQuery.executeUpdate();
         session.getTransaction().commit();
