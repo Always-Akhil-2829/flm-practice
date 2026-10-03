@@ -9,8 +9,8 @@ public class Delete {
     public static void main(String args[]){
         SessionFactory sessionFactory = HibUtil.getSessionFactory();
         Session session = sessionFactory.openSession();
-        //first i took obj from the db and stored
-        Student s= session.find(Student.class,1);
+        //while using remove we need to create an object with correct id then we can perform remove
+        Student s= new Student(1,"",0);
         session.beginTransaction();
         //used stored object to remove it from the db
         session.remove(s);
