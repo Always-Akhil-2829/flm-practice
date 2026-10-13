@@ -2,6 +2,12 @@ package com.beans;
 
 public class Controller {
     private static Controller controller= null;
+
+    @Override
+    public String toString() {
+        return "Controller{}";
+    }
+
     private Controller(){
 
     }

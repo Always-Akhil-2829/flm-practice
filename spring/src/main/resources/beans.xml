@@ -7,5 +7,26 @@
     <constructor-arg value="Akhil"/>
     <constructor-arg value="76"/>
 </bean>
+    <bean class="com.beans.Laptop" id="laptop">
+        <property name="laptopId" value="1" />
+        <property name="brand" value="HP"/>
+        <property name="processor" value="Intel i5"/>
+        <property name="ram" value="16"/>
+        <property name="storage" value="512"/>
+    </bean>
+    <bean class="com.beans.Employee" id="employee" autowire="byName">
+        <property name="empId" value="1"/>
+        <property name="empName" value="Akhil"/>
+<!--        <property name="laptop" ref="laptop"/>-->
+        <property name="skills">
+            <list>
+                <value>Java</value>
+                <value>SQL</value>
+                <value>JDBC</value>
+                <value>Hibernate</value>
+                <value>Spring</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>
